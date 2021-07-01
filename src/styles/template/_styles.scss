@@ -1,0 +1,90 @@
+// BACKGROUNDS
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
+
+.bg-tertiary {
+  background-color: $tertiary !important;
+}
+
+.bg-default {
+  background-color: $default;
+}
+
+.bg-cousin {
+  background-color: $cousin;
+}
+
+.bg-section {
+  background: linear-gradient(180deg, rgba(64, 196, 255, 1) 0%, rgba(186, 142, 181, 1) 100%);
+}
+
+.bg-gradient--primary {
+  background: linear-gradient(0deg, rgba(31, 33, 98, 1) 0%, rgba(64, 67, 175, 1) 100%);
+}
+
+.bg-gradient--gray {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 100%);
+}
+
+.bg-taurus2 {
+  background-color: $taurus2;
+}
+
+.c-taurus2 {
+  color: $taurus2;
+}
+
+.c-primary {
+  color: $primary !important;
+}
+
+.c-secondary {
+  color: $secondary !important;
+}
+
+.c-tertiary {
+  color: $tertiary !important;
+}
+
+.c-default {
+  color: $default;
+}
+
+.c-cousin {
+  color: $cousin;
+}
+
+.white {
+  color: white;
+}
+
+.space_content-y {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.space_title-b {
+  padding-bottom: 50px;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px rgb(20, 20, 20);
+}
+
+.control-logo {
+  width: 400px;
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,18 @@
+mixin gallery(href, src)
+  .mosaic_content.mosaic_embed
+    a(href=href data-toggle="lightbox" data-gallery="example-gallery" data-type="image")
+      .mosaic_overlay
+        .mosaic_details.fadeIn-bottom
+          img.img-fluid(src="images/logo-white.svg", alt="Logo Taurus Seguros")
+      img.img-fluid(src=src)
+.d-flex.flex-wrap.justify-content-start.mosaic--margin
+  +gallery('https://unsplash.it/800/600?random&seed=0','https://unsplash.it/800/600?random&seed=0')
+  +gallery('https://unsplash.it/800/600?random&seed=1','https://unsplash.it/800/600?random&seed=1')
+  +gallery('https://unsplash.it/800/600?random&seed=2','https://unsplash.it/800/600?random&seed=2')
+  +gallery('https://unsplash.it/800/600?random&seed=3','https://unsplash.it/800/600?random&seed=3')
+  +gallery('https://unsplash.it/800/600?random&seed=4','https://unsplash.it/800/600?random&seed=4')
+  +gallery('https://unsplash.it/800/600?random&seed=5','https://unsplash.it/800/600?random&seed=5')
+  +gallery('https://unsplash.it/800/600?random&seed=6','https://unsplash.it/800/600?random&seed=6')
+  +gallery('https://unsplash.it/800/600?random&seed=7','https://unsplash.it/800/600?random&seed=7')
+  +gallery('https://unsplash.it/800/600?random&seed=8','https://unsplash.it/800/600?random&seed=8')
+  +gallery('https://unsplash.it/800/600?random&seed=9','https://unsplash.it/800/600?random&seed=9')

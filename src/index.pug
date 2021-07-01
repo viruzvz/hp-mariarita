@@ -1,0 +1,18 @@
+doctype html
+html(lang='pt')
+  head
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='shortcut icon' href='assets/cropped-symbol-32x32.png' sizes='32x32')
+    link(rel='shortcut icon' href='assets/cropped-symbol-192x192.png' sizes='192x192')
+    link(rel='shortcut icon' href='assets/cropped-symbol-180x180.png' sizes='180x180')
+    title Maria Rita Designer de interiores
+  body
+    include componentes/mixin.pug
+    block header
+      include partials/header.pug
+    block content
+      include partials/content.pug
+    block footer
+      include partials/footer.pug
