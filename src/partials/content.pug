@@ -1,2 +1,71 @@
-.content
+mixin li-timeline(date, text)
+  li 
+    span.timeline-point 
+    span.date
+      = date
+    p.captionList
+      = text
 
+mixin perfil(title, text)
+  p
+    i + 
+    strong
+      = title 
+    span
+      = text
+section.bg-style1(aria-label="Quem Somos")
+  .container
+    .row 
+      .col-lg-12
+        article
+          h2 Quem
+            span Somos
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos inventore, explicabo iusto sint quisquam doloribus, voluptatum voluptatibus dolorem facilis quibusdam quod possimus officia, tempora in fugiat blanditiis sit veniam a.
+      .col-lg-3
+        figure
+          img(src="", alt="")
+
+      .col-lg-8
+        article
+          h3 Designer 
+            span de interiores
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum consequatur quod eos animi fugiat voluptatem magnam a, odit cum autem. Eos rem provident quis ducimus eveniet aperiam autem sed recusandae!
+          .row 
+            .col-lg-6
+              article
+                +perfil('Nome: ', 'lorem ipsum dolor')
+                +perfil('Telefone: ', '+5561 99999-5555')
+                +perfil('Cidade: ', 'Brasília - DF')
+            .col-lg-6
+              article 
+                +perfil('E-mail: ', 'meu@email.com')
+                +perfil('Freelancer: ', 'Sim')
+                +perfil('Empresarial: ', 'Sim')
+            .col-lg-12 
+              article 
+                dl 
+                  dt Projetos
+                  dd Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores asperiores laudantium quas neque ex ipsam reprehenderit vero minima eaque accusantium? Animi, quo iure facere unde autem quas at consequatur omnis?
+                  dt Consultorias
+                  dd Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt sed sit sapiente nulla iure nostrum voluptas similique amet odio. Unde in mollitia nihil ab voluptatum soluta labore assumenda! Quam, blanditiis?
+                  dt Vitrines
+                  dd Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, explicabo facere. Iusto reiciendis maiores commodi nulla. Et error vero consectetur perferendis aliquam est, aliquid numquam illo suscipit, repellat enim dolorum.
+
+section.bg-secondary(aria-label="timeline")
+  .container
+    .row 
+      .col-md-12
+        article 
+          h2 Currículo
+          .timeline 
+            .timeline-line 
+              span.timeline-innerline 
+            ul.listline
+              +li-timeline('2000', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
+              +li-timeline('2005', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
+              +li-timeline('2010', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
+              +li-timeline('2015', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
+              +li-timeline('2021', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
+section(aria-label="portfólio")
+  
+          

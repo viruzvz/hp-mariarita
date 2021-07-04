@@ -1,0 +1,48 @@
+.link {
+	transition: all 0.2s linear;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+
+.link-facebookDeep,
+.link-instagramDeep,
+.link-whatsDeep {
+  .path1 {
+    &::before {
+      transition: all 0.2s linear;
+      color: #333333;
+    }
+  }
+}
+
+.link-facebookDeep {
+  &:hover {
+    .path1 {
+      &::before {
+        color: #1877f2;
+      }
+    }
+  }
+}
+
+.link-instagramDeep {
+  &:hover {
+    .path1 {
+      &::before {
+        color: #d10059;
+      }
+    }
+  }
+}
+
+.link-whatsDeep {
+  &:hover {
+    .path1 {
+      &::before {
+        color: #48a91f;
+      }
+    }
+  }
+}

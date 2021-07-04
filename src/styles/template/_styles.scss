@@ -31,14 +31,6 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 100%);
 }
 
-.bg-taurus2 {
-  background-color: $taurus2;
-}
-
-.c-taurus2 {
-  color: $taurus2;
-}
-
 .c-primary {
   color: $primary !important;
 }
@@ -63,21 +55,8 @@
   color: white;
 }
 
-.space_content-y {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.space_title-b {
-  padding-bottom: 50px;
-}
-
 .text-shadow {
   text-shadow: 1px 1px 2px rgb(20, 20, 20);
-}
-
-.control-logo {
-  width: 400px;
 }
 
 .size-auto,

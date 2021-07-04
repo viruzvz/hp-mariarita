@@ -1,8 +1,14 @@
 @import 'vendors/bootstrap';
-// @import 'vendors/font-awesome';
+@import 'vendors/icomoon';
 
 @import 'template/variables';
 @import 'template/template';
 @import 'template/mixins';
 @import 'template/styles';
+
+@import 'componentes/navbar';
+@import 'componentes/header';
+@import 'componentes/link';
+@import 'componentes/timeline';
+
 
