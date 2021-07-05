@@ -20,7 +20,15 @@
 }
 
 .bg-section {
-  background: linear-gradient(180deg, rgba(64, 196, 255, 1) 0%, rgba(186, 142, 181, 1) 100%);
+  background: #f5f8fd;
+}
+
+.bg-footer {
+  background-color: #333;
+}
+
+.bg-subfooter {
+  background-color: $primary;
 }
 
 .bg-gradient--primary {

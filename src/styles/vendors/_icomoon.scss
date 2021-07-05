@@ -165,3 +165,12 @@
   margin-left: -1em;
   color: rgb(255, 255, 255);
 }
+.icon-link:before {
+  content: "\e9cb";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
