@@ -20,7 +20,10 @@ module.exports = (env = {}, argv) => {
     },
 
     resolve: {
-      mainFields: ['browser', 'main', 'module']
+      mainFields: ['browser', 'main', 'module'],
+      alias: {
+        'jquery-ui': 'jquery-ui-dist/jquery-ui.js'
+      }
     },
 
     output: {
@@ -119,7 +122,8 @@ module.exports = (env = {}, argv) => {
     plugins: [
       new webpack.ProvidePlugin({
         $: 'jquery',
-        jQuery: 'jquery'
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
       }),
       new MiniCssExtractPlugin({
         filename: '[name].css'

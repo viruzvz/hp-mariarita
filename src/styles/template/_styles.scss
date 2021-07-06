@@ -31,6 +31,22 @@
   background-color: $primary;
 }
 
+.bg-quemsomos {
+  min-height: 400px;
+	background-image: url('../../images/logo-bg.jpg');
+	background-position: right, center;
+	background-repeat: no-repeat;
+}
+
+.bg-homeStyle {
+  min-height: 305px;
+	position: relative;
+	background-image: url('../../images/bg-house-full.png');
+	background-position: bottom, center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .bg-gradient--primary {
   background: linear-gradient(0deg, rgba(31, 33, 98, 1) 0%, rgba(64, 67, 175, 1) 100%);
 }

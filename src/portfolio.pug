@@ -1,0 +1,13 @@
+doctype html
+html(lang='pt')
+  head
+    include partials/head.pug
+  body
+    include componentes/mixin.pug
+    block header
+      include partials/header.pug
+    block content
+      .content
+        include pages/apt-recife.pug
+    block footer
+      include partials/footer.pug

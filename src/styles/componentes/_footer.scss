@@ -1,10 +1,4 @@
 .footer {
-  min-height: 305px;
-	position: relative;
-	background-image: url('../../images/bg-house-full.png');
-	background-position: bottom, center;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 .subfooter {
 	color: #ccc;
@@ -12,10 +6,10 @@
 	display: flex;
 	padding: 15px;
 	span {
-		width: 45%;
+		width: 42.5%;
 		text-align: end;
 		&:first-child {
-			width: 55%;
+			width: 57.5%;
 		}
 	}
 }

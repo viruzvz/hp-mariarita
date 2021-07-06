@@ -24,3 +24,24 @@ section {
   padding: 60px 0;
   overflow: hidden;
 }
+
+h1,
+h2,
+h3 {
+  color: $style-3;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+h2, 
+h3 {
+  span {
+    &:first-child {
+      border-bottom: 4px solid $style-5;
+    }
+    &:last-child {
+      color: $style-5;
+    }
+  }
+}
