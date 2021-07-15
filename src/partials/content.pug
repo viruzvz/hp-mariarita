@@ -44,37 +44,38 @@ section.bg-quemsomos#quemsomos(aria-label="Quem Somos")
           h2 
             span Quem
             span &nbsp;Somos
-          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos inventore, explicabo iusto sint quisquam doloribus, voluptatum voluptatibus dolorem facilis quibusdam quod possimus officia, tempora in fugiat blanditiis sit veniam a.
+          p O serviço de Designer é beleza, mobilidade, funcionalidade e qualidade. Chega um momento em fazemos escolhas, onde o principal do trabalho é o prazer e reconhecimento e a melhor satisfação desse trabalho é quando na entrega você observa seu cliente e todas as suas expressões são de satisfação e alegria bem estampada no rosto, aquele sorriso, essa é minha realização. Está tudo certo, lindo!!!
+
       .col-lg-3
         figure
-          img(src="", alt="")
+          img.img-fluid(src="images/foto.jpg", alt="Foto Maria Rita")
 
       .col-lg-8
         article
           h3 
             span Designer
             span &nbsp;de interiores
-          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum consequatur quod eos animi fugiat voluptatem magnam a, odit cum autem. Eos rem provident quis ducimus eveniet aperiam autem sed recusandae!
+          p Criar ambientes confortáveis, com praticidade e mobilidade, busco a satisfação e a felicidade do cliente na entrega dos trabalhos. Apaixonada por arte e decoração, hoje me dedico ao Design que é uma paixão. 
           .row 
             .col-lg-6
               article
-                +perfil('Nome: ', 'lorem ipsum dolor')
-                +perfil('Telefone: ', '+5561 99999-5555')
+                +perfil('Nome: ', 'Maria Rita da Silva Domingues')
+                +perfil('Telefone: ', '+55 71 9344-2294')
                 +perfil('Cidade: ', 'Brasília - DF')
             .col-lg-6
               article 
-                +perfil('E-mail: ', 'meu@email.com')
+                +perfil('E-mail: ', 'contato@mariaritadesigner.com.br')
                 +perfil('Freelancer: ', 'Sim')
                 +perfil('Empresarial: ', 'Sim')
             .col-lg-12 
               article 
                 dl 
                   dt Projetos
-                  dd Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores asperiores laudantium quas neque ex ipsam reprehenderit vero minima eaque accusantium? Animi, quo iure facere unde autem quas at consequatur omnis?
+                  dd Criação de objetos de Decoração. Ações Humanitárias (Atividades de promoção a Saúde e Ações sociais). Viagens. Caminhadas e trilhas. Vinhos. Gastronomia vegetariana. Designer de interiores, Paisagismo. Estudar.
                   dt Consultorias
-                  dd Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt sed sit sapiente nulla iure nostrum voluptas similique amet odio. Unde in mollitia nihil ab voluptatum soluta labore assumenda! Quam, blanditiis?
+                  dd Uma consultoria de designer de interiores presta serviço, fazer avaliação de ambiente, decoração, móveis, organizar de forma ampla e confortável, previnir de futuros problemas e agregar a beleza e usabilidade do local. 
                   dt Vitrines
-                  dd Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, explicabo facere. Iusto reiciendis maiores commodi nulla. Et error vero consectetur perferendis aliquam est, aliquid numquam illo suscipit, repellat enim dolorum.
+                  dd Vitrine fala com o cliente: Quando o consumidor já para, olha a Vitrine e entra na loja, nesse momento lhe foi despertado de alguma forma emoções e sensações, isso acontece, por que foi criado uma mensagem através da  Vitrine e essa comunicação, despertou o desejo do cliente, de entrar na loja e levar o produto..
 
 section.bg-secondary.bg-homeStyle(aria-label="timeline")
   .container
@@ -105,31 +106,30 @@ section#portfolio.portfolio.bg-section(aria-label="portfólio")
             li(data-filter=".filter-designer") Designer
             li(data-filter=".filter-produtos") Produtos
     .row.portfolio-grid.aos-init.aos-animate(data-aos='fade-up' data-aos-delay='100')
-      .col-lg-12
-      .col-lg-4.col-md-6.filter-produtos.portfolio-item
+      .col-lg-4.col-md-6.filter-designer.portfolio-item
         +portfolio-wrap('images/fotos/apt-recife/1.jpg', 'images/fotos/apt-recife/1.jpg', 'portfolio.html#portfolio') 
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=5', 'https://unsplash.it/800/600?random&seed=5', '#')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=6', 'https://unsplash.it/800/600?random&seed=6', '#')
       .col-lg-4.col-md-6.filter-produtos.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=1', 'https://unsplash.it/800/600?random&seed=1', '#')
-      .col-lg-4.col-md-6.filter-produtos.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=2', 'https://unsplash.it/800/600?random&seed=2', '#')
+        +portfolio-wrap('images/fotos/produtos/1.jpg', 'images/fotos/produtos/1.jpg', 'produtos.html#produtos')
       .col-lg-4.col-md-6.filter-designer.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=3', 'https://unsplash.it/800/600?random&seed=3', '#')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=7', 'https://unsplash.it/800/600?random&seed=7', '#')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=8', 'https://unsplash.it/800/600?random&seed=8', '#')
+        +portfolio-wrap('images/fotos/lojinha-bete/3.jpg', 'images/fotos/lojinha-bete/3.jpg', '#')
       .col-lg-4.col-md-6.filter-produtos.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=9', 'https://unsplash.it/800/600?random&seed=9', '#')
-      .col-lg-4.col-md-6.filter-produtos.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=10', 'https://unsplash.it/800/600?random&seed=10', '#')
+        +portfolio-wrap('images/fotos/penduradores/1.jpg', 'images/fotos/penduradores/1.jpg', '#')
       .col-lg-4.col-md-6.filter-designer.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=11', 'https://unsplash.it/800/600?random&seed=11', '#')
+        +portfolio-wrap('images/fotos/prototipos/3.jpg', 'images/fotos/prototipos/3.jpg', '#')
+      .col-lg-4.col-md-6.filter-designer.portfolio-item
+        +portfolio-wrap('images/fotos/sala-cozinha-salvador-2020/4.jpg', 'images/fotos/sala-cozinha-salvador-2020/4.jpg', '#')
+      .col-lg-4.col-md-6.filter-designer.portfolio-item
+        +portfolio-wrap('images/fotos/salao/3.jpg', 'images/fotos/salao/3.jpg', '#')
+      .col-lg-4.col-md-6.filter-designer.portfolio-item
+        +portfolio-wrap('images/fotos/vitrine/1.jpg', 'images/fotos/vitrine/1.jpg', '#')
+      .col-lg-4.col-md-6.filter-designer.portfolio-item
+        +portfolio-wrap('images/fotos/salao2/1.jpg', 'images/fotos/salao2/1.jpg', '#')
       .col-lg-4.col-md-6.filter-produtos.portfolio-item
-        +portfolio-wrap('https://unsplash.it/800/600?random&seed=12', 'https://unsplash.it/800/600?random&seed=12', '#')
+        +portfolio-wrap('images/fotos/produtos/16.jpg', 'images/fotos/produtos/16.jpg', '#')
+      .col-lg-4.col-md-6.filter-produtos.portfolio-item
+        +portfolio-wrap('images/fotos/produtos/15.jpg', 'images/fotos/produtos/15.jpg', '#')
+      .col-lg-4.col-md-6.filter-produtos.portfolio-item
+        +portfolio-wrap('images/fotos/penduradores/4.jpg', 'images/fotos/penduradores/4.jpg', '#')
         
 section#contato
   .container

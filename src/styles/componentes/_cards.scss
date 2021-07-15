@@ -1,0 +1,82 @@
+.contenedor {
+	height: 100%;
+	padding: 5% 0;
+}
+
+.container-foto {
+	background-color: rgba(57, 62, 93, 0);
+  position: relative;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+  margin-bottom: 30px;
+  article {
+    padding: 10%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    transition: all 0.5s ease;
+  }
+  .title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 25px;
+    margin-bottom: 15px;
+    border-bottom: #fff solid 1px;
+  }
+  .sub-title {
+    font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  img {
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: all 4s ease;
+  }
+  &:hover {
+    background-color: rgba(57, 62, 93, 0.7);
+    cursor: inherit;
+    img {
+      opacity: 0.1;
+      transform: scale(1.5);
+    }
+    article {
+      transform: translate(2px, -69px);
+    }
+    .ver-mas {
+      cursor: pointer;
+      transform: translate(0px, 0px);
+      opacity: 0.7;
+      color: $primary;
+      a {
+        color: $style-5;
+      }
+    }    
+  }
+}
+
+.ver-mas {
+	background-color: $tertiary;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+	height: 70px;
+	z-index: 1;
+	opacity: 0;
+	transform: translate(0px, 70px);
+	transition: all 0.2s ease-in-out;
+  a {
+    text-align: center;
+    padding: 10px 15px;
+    width: 50%;
+    font-size: 32px;
+    &:first-child {
+      border-right: 1px solid #999;
+    }
+  }
+}
