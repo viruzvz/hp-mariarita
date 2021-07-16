@@ -4,7 +4,7 @@ import 'popper.js'
 import 'bootstrap'
 import './js/timeline.js'
 
-import AOS from 'aos'
+// import AOS from 'aos'
 import $ from 'jquery'
 window.$ = window.jQuery = $
 import jQueryBridget from 'jquery-bridget'
@@ -12,6 +12,7 @@ import 'owl.carousel'
 import Isotope from 'isotope-layout'
 import venobox from 'venobox'
 import 'jquery-ui'
+import { debounce } from "debounce"
 
 !(function($) {
   "use strict"
@@ -33,19 +34,12 @@ import 'jquery-ui'
       portfolioIsotope.isotope({
         filter: $(this).data('filter')
       })
-      aos_init()
+      // aos_init()
     })
-    // Init AOS
-    function aos_init() {
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-out-back",
-        once: true
-      });
-    }
-    $(window).on('load', function() {
-      aos_init();
-    });
+
+    // $(window).on('load', function() {
+    //   aos_init();
+    // });
     // Initiate venobox (lightbox feature used in portofilo)
     $(document).ready(function() {
       $('.venobox').venobox()
@@ -97,5 +91,60 @@ import 'jquery-ui'
     pagination: true,
     rewindSpeed: 500
   })
+
+// Debounce do Lodash
+debounce = function(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+
+(function(){
+	var $target = $('.anime'),
+			animationClass = 'anime-start',
+			offset = $(window).height() * 3/4;
+
+  var $targetLine = $('.animeLine'),
+      animationLineClass = 'timeline-animate'
+
+	function animeScroll() {
+		var documentTop = $(document).scrollTop();
+
+		$target.each(function(){
+			var itemTop = $(this).offset().top;
+			if (documentTop > itemTop - offset) {
+				$(this).addClass(animationClass);
+			} else {
+				$(this).removeClass(animationClass);
+			}
+		});
+
+		$targetLine.each(function(){
+      var itemTop = $(this).offset().top;
+			if (documentTop > itemTop - offset) {
+				$(this).addClass(animationLineClass);
+			} else {
+				$(this).removeClass(animationLineClass);
+			}
+		});
+	}
+
+	animeScroll();
+
+	$(document).scroll(debounce(function(){
+		animeScroll();
+	}, 150));
+})();
+
 
 })(jQuery)

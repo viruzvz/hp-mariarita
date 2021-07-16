@@ -1,0 +1,22 @@
+doctype html
+html(lang='pt')
+  head
+    include partials/head.pug
+  body
+    include componentes/mixin.pug
+    block header
+      include partials/header.pug
+    block content
+      .content
+        .container 
+          .row 
+            .col
+              .py-5
+                .progress.timeline-vz
+                  .timeline-vz-cols
+                    .circle-vz
+                    .date-vz 2020
+                    .text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, harum maxime. Enim placeat consequuntur numquam nostrum voluptates!
+
+    block footer
+      include partials/footer.pug

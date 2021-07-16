@@ -1,3 +1,16 @@
+.social-res {
+  @include media-breakpoint-down(lg) {
+    display: inline-flex;
+    flex-direction: row;
+    a {
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 .header-bg {
   background-size: cover, contain;
   background-position: top center;
@@ -33,7 +46,7 @@
 
 .header-caption {
   position: absolute;
-  bottom: 22%;
+  bottom: 10%;
   font-size: 30px;
   color: #999;
   z-index: 1;
@@ -41,6 +54,9 @@
   span {
     font-size: 22px;
     margin: 5px 15px;
+  }
+  @include media-breakpoint-up(lg) {
+    bottom: 18%;
   }
 }
 

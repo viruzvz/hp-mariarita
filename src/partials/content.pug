@@ -12,12 +12,13 @@ mixin media-obj(class1, title, href, text)
         = text
 
 mixin li-timeline(date, text)
-  li 
-    span.timeline-point 
-    span.date
+  .timeline-vz-cols
+    .circle-vz
+    .date-vz
       = date
-    p.captionList
+    .text
       = text
+
 
 mixin perfil(title, text)
   p
@@ -47,7 +48,7 @@ section.bg-quemsomos#quemsomos(aria-label="Quem Somos")
           p O serviço de Designer é beleza, mobilidade, funcionalidade e qualidade. Chega um momento em fazemos escolhas, onde o principal do trabalho é o prazer e reconhecimento e a melhor satisfação desse trabalho é quando na entrega você observa seu cliente e todas as suas expressões são de satisfação e alegria bem estampada no rosto, aquele sorriso, essa é minha realização. Está tudo certo, lindo!!!
 
       .col-lg-3
-        figure
+        figure.anime
           img.img-fluid(src="images/foto.jpg", alt="Foto Maria Rita")
 
       .col-lg-8
@@ -82,18 +83,20 @@ section.bg-secondary.bg-homeStyle(aria-label="timeline")
     .row 
       .col-lg-12
         article
-          h2.h2-timeline Histórico
+          h2.h2-timeline Bio
       .col-lg-12
-          .timeline 
-            .timeline-line 
-              span.timeline-innerline 
-            ul.listline
-              +li-timeline('2000', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
-              +li-timeline('2005', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
-              +li-timeline('2010', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
-              +li-timeline('2015', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
-              +li-timeline('2021', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
-section#portfolio.portfolio.bg-section(aria-label="portfólio")
+        .py-5.timeline-res
+          .progress.timeline-vz.animeLine
+            +li-timeline('1985', 'Habilitação Profissional do Magistério - Instituto de Educação do Ceará - Fortaleza - CE')
+            +li-timeline('1991', 'Curso de Formação Militar - Marinha do Brasil - Rio de Janeiro - RJ')
+            +li-timeline('2016', 'Curso Técnico em Radiologia - Escola Técnica Sete - Salvador - BA')
+            +li-timeline('2005', 'Especialização em Auditoria de Sistema de Saúde - Universidade Estácio de Sá - Salvador - BA')
+            +li-timeline('2010', 'Curso Superior de Tecnologia em Gestão Hospitalar - Universidade Estácio de Sá - Rio de Janeiro - RJ')
+            +li-timeline('2020', 'Estudante de Design de Interiores - Universidade Paulista - Brasília - DF')
+
+
+
+section#portfolio.portfolio.bg-section.anime(aria-label="portfólio")
   .container
     .row.aos-init.aos-animate(data-aos='fade-up' data-aos-delay='100')
       .col-lg-12
@@ -106,29 +109,29 @@ section#portfolio.portfolio.bg-section(aria-label="portfólio")
             li(data-filter=".filter-designer") Designer
             li(data-filter=".filter-produtos") Produtos
     .row.portfolio-grid.aos-init.aos-animate(data-aos='fade-up' data-aos-delay='100')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
+      .col-lg-4.col-sm-6.filter-designer.portfolio-item
         +portfolio-wrap('images/fotos/apt-recife/1.jpg', 'images/fotos/apt-recife/1.jpg', 'portfolio.html#portfolio') 
-      .col-lg-4.col-md-6.filter-produtos.portfolio-item
+      .col-lg-4.col-sm-6.filter-produtos.portfolio-item
         +portfolio-wrap('images/fotos/produtos/1.jpg', 'images/fotos/produtos/1.jpg', 'produtos.html#produtos')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
+      .col-lg-4.col-sm-6.filter-designer.portfolio-item
         +portfolio-wrap('images/fotos/lojinha-bete/3.jpg', 'images/fotos/lojinha-bete/3.jpg', '#')
-      .col-lg-4.col-md-6.filter-produtos.portfolio-item
+      .col-lg-4.col-sm-6.filter-produtos.portfolio-item
         +portfolio-wrap('images/fotos/penduradores/1.jpg', 'images/fotos/penduradores/1.jpg', '#')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
+      .col-lg-4.col-sm-6.filter-designer.portfolio-item
         +portfolio-wrap('images/fotos/prototipos/3.jpg', 'images/fotos/prototipos/3.jpg', '#')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
+      .col-lg-4.col-sm-6.filter-designer.portfolio-item
         +portfolio-wrap('images/fotos/sala-cozinha-salvador-2020/4.jpg', 'images/fotos/sala-cozinha-salvador-2020/4.jpg', '#')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
+      .col-lg-4.col-sm-6.filter-designer.portfolio-item
         +portfolio-wrap('images/fotos/salao/3.jpg', 'images/fotos/salao/3.jpg', '#')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
+      .col-lg-4.col-sm-6.filter-designer.portfolio-item
         +portfolio-wrap('images/fotos/vitrine/1.jpg', 'images/fotos/vitrine/1.jpg', '#')
-      .col-lg-4.col-md-6.filter-designer.portfolio-item
+      .col-lg-4.col-sm-6.filter-designer.portfolio-item
         +portfolio-wrap('images/fotos/salao2/1.jpg', 'images/fotos/salao2/1.jpg', '#')
-      .col-lg-4.col-md-6.filter-produtos.portfolio-item
+      .col-lg-4.col-sm-6.filter-produtos.portfolio-item
         +portfolio-wrap('images/fotos/produtos/16.jpg', 'images/fotos/produtos/16.jpg', '#')
-      .col-lg-4.col-md-6.filter-produtos.portfolio-item
+      .col-lg-4.col-sm-6.filter-produtos.portfolio-item
         +portfolio-wrap('images/fotos/produtos/15.jpg', 'images/fotos/produtos/15.jpg', '#')
-      .col-lg-4.col-md-6.filter-produtos.portfolio-item
+      .col-lg-4.col-sm-6.filter-produtos.portfolio-item
         +portfolio-wrap('images/fotos/penduradores/4.jpg', 'images/fotos/penduradores/4.jpg', '#')
         
 section#contato
@@ -141,8 +144,8 @@ section#contato
       .col-lg-5
         article.contact
           +media-obj('icon-find', 'Localização', '#', 'Lorem ipsum dolor sit amet')
-          +media-obj('icon-email', 'E-mail', 'mailto:seu@email.com.br', 'seu@email.com.br')
-          +media-obj('icon-phone', 'Telefone', 'tel:+5561 99999-9999', '+5561 99999-9999')
+          +media-obj('icon-email', 'E-mail', 'mailto:contato@mariaritadesigner.com.br', 'contato@mariaritadesigner.com.br')
+          +media-obj('icon-phone', 'Telefone', 'tel:+55 71 9344-2294', '+55 71 9344-2294')
           iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1141.3817808666047!2d-47.8095802958237!3d-15.796813401702838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d3fcaa560c5%3A0xb8d4dc9df203a4ac!2sPraia%20Ermida!5e0!3m2!1spt-BR!2sbr!4v1625443849952!5m2!1spt-BR!2sbr' width='100%' height='290' style='border:0;' allowfullscreen='' loading='lazy')
       .col-lg-7
         article.contact
@@ -150,13 +153,11 @@ section#contato
             .row
               .col
                 .mb-3
-                  .input-group
-                    span.input-group-text Nome e Sobre nome
-                    input.form-control(type='text' aria-label='First name')
-                    input.form-control(type='text' aria-label='Last name')
+                  label.form-label(for='name') Nome
+                  input.form-control#name(type='text')
               .col-lg-12
                 .mb-3
-                  label.form-label(for='email') Email address
+                  label.form-label(for='email') E-mail
                   input#email.form-control(type='email' placeholder='name@example.com')
               .col-lg-12 
                 .mb-3

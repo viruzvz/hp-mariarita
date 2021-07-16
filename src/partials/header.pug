@@ -4,8 +4,13 @@ header
       .container-fluid
         a.navbar-brand(href='#')
           img(src="images/logo-nav.svg", alt="", width="50px")
-        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-          span.navbar-toggler-icon
+        //- button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        //-   span.navbar-toggler-icon
+        button.navbar-toggle.collapsed.x(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
         #navbarSupportedContent.collapse.navbar-collapse.nav-menu
           ul.navbar-nav.me-auto.mb-2.mb-lg-0
             li.nav-item
@@ -18,7 +23,7 @@ header
               a.nav-link(href='produtos.html#produtos') Produtos
             li.nav-item
               a.nav-link(href='#contato') Contatos
-          ul.navbar-nav.mb-2.mb-lg-0.align-items-end
+          ul.navbar-nav.mb-2.mb-lg-0.align-items-end.social-res
             a.nav-link.link-facebookDeep(href='#')
               span.icon-circle-face.fs-4
                 span.path1

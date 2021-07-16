@@ -1,125 +1,100 @@
-.timeline {
-  padding-top: 30px;
-  // display: grid;
-  // grid-template-columns: 40%;
-  // justify-content: center;
+.timeline-res {
+  position: relative;
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .h2-timeline {
-  color: $style-6;
-  margin-top: 0;
+  color: $style-7;
 }
 
-.listline {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
+.timeline-vz {
+  height: 5px;
+  overflow: inherit;
+  @include media-breakpoint-down(lg) {
+    height: 700px;
+    width: 5px;
+    flex-direction: column;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 0;
+    background-color: $style-7;
+    @include media-breakpoint-down(lg) {
+      width: 5px;
+      height: 0;
+    }
+  }
+}
+
+.timeline-animate {
+  &::after {
+    transition: width 1s ease-in-out;
+    width: 92%;
+    @include media-breakpoint-down(lg) {
+      transition: height 1s ease-in-out;
+      height: 75%;
+      width: 5px;
+    }
+  }
+  .timeline-vz-cols {
+    .circle-vz,
+    .date-vz,
+    .text {
+      transition: all 1s ease-in-out;
+      opacity: 1;
+    }
+  }
+}
+
+.timeline-vz-cols {
+  width: 100%;
   justify-content: center;
   align-items: center;
-  list-style: none;
-  padding: 0;
-  li {
-    margin-top: 30px;
-    position: relative;
-    padding: 25px;
-  }
-}
-
-.captionList {
-  padding: 0 20px;
-  transition: 1.5s;
-  color: $style-7;
-}
-
-.date {
-  position: absolute;
-  top: 30px;
-  left: -50px;
-  transition: 1.5s;
-  color: $style-7;
-  font-weight: bold;
-}
-
-.timeline-line {
-  background: $style-7;
-  width: 4px;
-  border-radius: 12px;
+  display: flex;
+  // background-color: $style-6;
   position: relative;
-  justify-self: end;
-}
-
-.timeline-point {
-  border: none;
-  position: absolute;
-  border-radius: 50%;
-  background:  $style-7;
-  width: 8px;
-  height: 8px;
-  top: 30px;
-  left: -6px;
-  transition: 1.5s ease;
-}
-
-.timeline-innerline {
-  position: absolute;
-  background: blue;
-  width: 4px;
-  height: 0%;
-  top: 0%;
-  left: 0%;
-  transition: 1s linear;
-}
-
-@media screen and (min-width: 728px) {
-  .timeline {
-    display: block;
+  text-align: center;
+  @include media-breakpoint-down(lg) {
+    align-items: inherit;
+    height: 100%;
   }
-  .listline {
-    flex-direction: row;
-    li {
-      margin-top: 0px;
-      position: relative;
-      width: 100%;
-      padding: 0px;
+
+  .circle-vz {
+    opacity: 0;
+    width: 15px;
+    height: 15px;
+    background-color: $style-7;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .date-vz {
+    top: -30px;
+    opacity: 0;
+    position: absolute;
+    font-weight: bold;
+    color: $style-7;
+    @include media-breakpoint-down(lg) {
+      left: 30px;
+      top: 0;
     }
   }
 
-  .captionList {
-    transform: translateY(-10px);
-    transition: 1.5s;
-  }
-
-  .date {
-    transition: 1.5s;
-    font-size: 12px;
-
+  .text {
+    opacity: 0;
     position: absolute;
-    top: -60px;
-    left: 38%;
-  }
-
-  .timeline-point {
-    width: 15px;
-    height: 15px;
-
-    top: -40px;
-    left: 40%;
-    transition: 1.5s ease;
-  }
-
-  .timeline-line {
-    width: 100%;
-    height: 4px;
-  }
-
-  .timeline-innerline {
-    position: absolute;
-    background: blue;
-    width: 0%;
-    height: 4px;
-    top: 0%;
-    left: 0%;
-    transition: 1s linear;
-    border-radius: 999px;
+    top: 20px;
+    margin: 0 15px;
+    color: $style-7;
+    @include media-breakpoint-down(lg) {
+      width: 124px;
+      right: 0px;
+      top: 10px;
+    }
   }
 }
