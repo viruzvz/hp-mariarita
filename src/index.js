@@ -2,9 +2,6 @@ import './styles/main.scss'
 import './styles/main.less'
 import 'popper.js'
 import 'bootstrap'
-import './js/timeline.js'
-
-// import AOS from 'aos'
 import $ from 'jquery'
 window.$ = window.jQuery = $
 import jQueryBridget from 'jquery-bridget'
@@ -34,12 +31,8 @@ import { debounce } from "debounce"
       portfolioIsotope.isotope({
         filter: $(this).data('filter')
       })
-      // aos_init()
     })
 
-    // $(window).on('load', function() {
-    //   aos_init();
-    // });
     // Initiate venobox (lightbox feature used in portofilo)
     $(document).ready(function() {
       $('.venobox').venobox()
